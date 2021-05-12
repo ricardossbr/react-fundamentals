@@ -1,6 +1,10 @@
 import './app.css'
 import React from 'react';
 
+import Input from './components/form/input'
+import IndirectFather from './components/comunication/indirect-father'
+import DirectFather from './components/comunication/direct-father'
+import UserInfo from './components/conditional/user-info'
 import ListElement from './components/repeat/list-of-students'
 import FamilyWithChildren from './components/basic/family-with-children';
 import Family from './components/basic/family';
@@ -16,12 +20,31 @@ export default () => (
         <h1>React fundamentals</h1>
         <div className="Cards">            
 
+            <Card title="Work with controlled component - Card #11" color="ice" >
+                <Input />
+            </Card>
 
-            <Card title="Work with repeat element Card" color="orange" >
+
+            <Card title="Work with indirect cominication between element - Card #10" color="ice" >
+                <IndirectFather />
+            </Card>
+
+
+            <Card title="Work with direct cominication between element - Card #9" color="ice" >
+                <DirectFather />
+            </Card>
+
+
+            <Card title="Work with conditional element - Card #8" color="brown" >
+                <UserInfo user="Felipe"/>
+                <UserInfo user=""/>
+            </Card>
+
+            <Card title="Work with repeat element - Card #7" color="orange" >
                 <ListElement></ListElement>
             </Card>
 
-            <Card title="Family components with children Card" color="green" >
+            <Card title="Family components with children - Card #6" color="green" >
                 <FamilyWithChildren lastName="Santos">
                     <FamilyMember name="Leandro" />
                     <FamilyMember name="Daniel" />
@@ -30,23 +53,23 @@ export default () => (
             </Card>
 
 
-            <Card title="Family components Card" color="pink" >
+            <Card title="Family components - Card #5" color="pink" >
                 <Family lastName="Santos"></Family>
             </Card>
 
-            <Card title="Fist component Card" color="green" >
+            <Card title="Fist component - Card #4" color="green" >
                 <Fist></Fist>
             </Card>
             
-            <Card title="Component with paramenters Card" color="#0080ff" >
+            <Card title="Component with paramenters - Card #3" color="#0080ff" >
                 <WithParameters title="title" subtitle="subtitle "></WithParameters>    
             </Card>
             
-            <Card title="Component with fragment Card" color="black">
+            <Card title="Component with fragment - Card #2" color="black">
                 <FragmentComponent></FragmentComponent>
             </Card>
             
-            <Card title="Random component Card" >
+            <Card title="Random component - Card #1" >
                 <RandomComponent min={1} max={60}></RandomComponent>
             </Card>
         </div>
